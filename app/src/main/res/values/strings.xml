@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">LuckyShopping</string>
+
+    <string name="cat_video_cards">Видеокарты</string>
+    <string name="cat_RAM_memory">Оперативная память</string>
+    <string name="cat_processors">Процессоры</string>
+    <string name="cat_ssd">SSD</string>
+    <string name="cat_motherboards">Материнская плата</string>
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="video_memory_capacity">Объем видеопамяти: </string>
+    <string name="type_video_memory">Тип видеопамяти: </string>
+    <string name="price">Цена: </string>
+    <string name="title_product">GIGABYTE nVidia GeForce 210</string>
+    <string name="full_description">Полное описание</string>
+
+
+</resources>
