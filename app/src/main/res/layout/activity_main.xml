@@ -5,6 +5,7 @@
     android:id="@+id/constraint"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#E5E5E5"
     tools:context=".MainActivity">
 
     <ScrollView
@@ -26,28 +27,28 @@
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_marginTop="56dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginRight="20dp"
                 android:text="@string/cat_processors"
                 android:textAllCaps="false"
                 android:textColor="#000000"
                 android:textSize="16sp"
                 app:backgroundTint="#C4C4C4"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.85"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <Button
                 android:id="@+id/but_cat_1"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginLeft="20dp"
                 android:layout_marginTop="56dp"
                 android:text="@string/cat_motherboards"
                 android:textAllCaps="false"
                 android:textColor="#000000"
                 android:textSize="16sp"
                 app:backgroundTint="#C4C4C4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.15"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -55,14 +56,14 @@
                 android:id="@+id/but_cat_3"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginLeft="20dp"
                 android:layout_marginTop="60dp"
                 android:text="@string/cat_RAM_memory"
                 android:textAllCaps="false"
                 android:textColor="#000000"
                 android:textSize="16sp"
                 app:backgroundTint="#C4C4C4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.15"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/but_cat_1" />
 
@@ -71,14 +72,14 @@
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_marginTop="60dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginRight="20dp"
                 android:text="@string/cat_video_cards"
                 android:textAllCaps="false"
                 android:textColor="#000000"
                 android:textSize="16sp"
                 app:backgroundTint="#C4C4C4"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.85"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/but_cat_2" />
 
             <Button

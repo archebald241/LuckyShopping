@@ -8,10 +8,6 @@
     <string name="cat_motherboards">Материнская плата</string>
     <!-- TODO: Remove or change this placeholder text -->
 
-    <string name="video_memory_capacity">Объем видеопамяти: </string>
-    <string name="type_video_memory">Тип видеопамяти: </string>
-    <string name="price">Цена: </string>
-    <string name="title_product">GIGABYTE nVidia GeForce 210</string>
     <string name="full_description">Полное описание</string>
 
 

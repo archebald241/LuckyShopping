@@ -1,17 +1,18 @@
 package com.example.luckyshoping;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.fragment.app.FragmentManager;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+
+import com.example.luckyshoping.activity.ProductActivity;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -22,6 +23,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button buttonCategory5;
 
     Intent startIntent;
+
+    static FirebaseDatabase firebaseDatabase;
+    private static DatabaseReference ref;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,38 +44,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         buttonCategory4.setOnClickListener(this);
         buttonCategory5.setOnClickListener(this);
 
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-
-        getMenuInflater().inflate(R.menu.main_menu, menu);
-        return true;
-    }
-
-    @SuppressLint("NonConstantResourceId")
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-
-        switch(id){
-            case R.id.cat_processors:
-                setStartIntent("cat_processors");
-                return true;
-            case R.id.cat_motherboards:
-                setStartIntent("cat_motherboards");
-                return true;
-            case R.id.cat_ssd:
-                setStartIntent("cat_ssd");
-                return true;
-            case R.id.cat_RAM_memory:
-                setStartIntent("cat_RAM_memory");
-                return true;
-            case R.id.cat_video_cards:
-                setStartIntent("cat_video_cards");
-                return true;
-        }
-        return super.onOptionsItemSelected(item);
+        firebaseDatabase = FirebaseDatabase.getInstance();
+        ref = firebaseDatabase.getReference("categories");
     }
 
 
@@ -101,5 +75,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         startIntent = new Intent(this, ProductActivity.class);
         startIntent.putExtra("category", category);
         startActivity(startIntent);
+    }
+
+    public static DatabaseReference getRef() {
+        return ref;
     }
 }
